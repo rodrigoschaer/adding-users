@@ -1,8 +1,8 @@
-import React, { ReactChild } from "react";
+import React, { ReactNode } from "react";
 import classes from "./Card.module.scss";
 
 type CardProps = {
-  children?: ReactChild;
+  children?: ReactNode;
   className?: string;
 };
 

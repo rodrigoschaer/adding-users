@@ -1,4 +1,4 @@
-import classes from "./UsersList.module.css";
+import classes from "./UsersList.module.scss";
 import { Card } from "../UI/Card";
 
 type UserType = {
@@ -16,9 +16,11 @@ export const UsersList = (props: UsersListProps) => {
     <Card className={classes.users}>
       <ul>
         {props.users.map((user: UserType) => {
-          <li>
-            {user.name} ({user.age}) years old
-          </li>;
+          return (
+            <li id={user.id}>
+              {user.name} ({user.age}) years old
+            </li>
+          );
         })}
       </ul>
     </Card>
